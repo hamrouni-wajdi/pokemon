@@ -4,15 +4,11 @@ import axios from "axios";
 export type pokemon = {
     name:String,
     url:String,
-    details? : pokemonDetails,
     order:Number,
 }
-export type pokemonDetails = {
-    abilities:String[]
-    moves:String[]
-}
 
-export function PokemonCard ({name,url, details,order}:pokemon){
+
+export function PokemonCard ({name,url,order}:pokemon){
 const [showDetails,setShowDetails] = useState(false)
 const [pokeDetails, setpokeDetails] = useState()
     

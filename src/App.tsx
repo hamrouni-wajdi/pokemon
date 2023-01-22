@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { pokemon, PokemonCard } from './components/pokemonCard/PokemonCard';
-import { PokemonCardList } from './components/pokemonCardlist/PokemonCardList';
 import axios from 'axios';
 import { url } from 'inspector';
 
@@ -16,7 +15,6 @@ function App() {
         `https://pokeapi.co/api/v2/pokemon/${search}`,
       );
       setArr(result.data);
-      console.log(arr['results'],"daaaaaata")
     };
     fetchData();
   }, [search]);
